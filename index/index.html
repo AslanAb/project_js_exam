@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="header flex sb aiCenter">
+        <div class="logoImg">
+            <img src="../images/logo.jpg" alt="" class="logoImg">
+        </div>
+        <div class="menu flex sb aiCenter">
+            <button class="buttonMainPage buttonMenu buttonStyle">Главная</button>
+            <button class="buttonAutors buttonMenu buttonStyle">Авторы</button>
+            <button class="buttonPersonalPosts buttonMenu buttonStyle">Мои посты</button>
+        </div>
+        <div class="login">
+            <button class="buttonStyle buttonLogin" data-path="login">Войти</button>
+            <button class="buttonStyle buttonLogout hide" data-path="login">Выйти</button>
+        </div>
+    </header>
+    <main class="main flex">
+        <div class="mainLeft flex column aiCenter">
+            <p class="p1 nutUserInP">Необходимо войти в аккаунт для публикации, оценки и комментировании постов</p>
+            <div class="portfileCard flex column aiCenter hide">
+                <img src="../images/santa.png" alt="" class="santaImg">
+                <p class="p1 idP"></p>
+                <span class="p1 nameSurnameP"></span>
+                <button class="buttonChangePortfileData buttonStyle flex sa aiCenter m20"> <img src="../images/setting.png"
+                        alt="" class="settingImg"> Редактировать</button>
+                <div class="changeInputDiv hide flex column">
+                    <input type="text" class="idChangeInput" placeholder="Введите аккаунт">
+                    <input type="text" class="nameChangeInput" placeholder="Введите имя">
+                    <input type="text" class="surnameChangeInput" placeholder="Введите фамилию">
+                    <input type="email" class="emailChangeInput" placeholder="Введите почту">
+                    <button class="buttonChange buttonStyle flex sa aiCenter">Изменить</button>
+                </div>
+            </div>
+        </div>
+        <div class="mainMid flex column aiCenter"></div>
+        <div class="mainRight flex column">
+            <span class="p2">Сортировать:</span>
+            <span class="p2">по рейтингу</span>
+            <select name="sortByRating" id="" class="select">
+                <option value="1">выбрать</option>
+                <option value="2">по возрастанию</option>
+                <option value="3">по убыванию</option>
+            </select>
+            <span class="p2">по дате</span>
+            <select name="sortByDate" id="" class="select1">
+                <option value="1">выбрать</option>
+                <option value="2">к новейшим</option>
+                <option value="3">к старейшим</option>
+            </select>
+            <button class="sort buttonStyle flex sa aiCenter">Сортировать</button>
+            <span class="p2">Поиск по аккаунту</span>
+            <input type="text" placeholder="Введите имя" class="inputSearch idSearch">
+            <span class="p2">Поиск по автору</span>
+            <input type="text" placeholder="Введите фио" class="inputSearch autorSearch">
+            <span class="p2">Поиск по названию поста</span>
+            <input type="text" placeholder="Введите название" class="inputSearch titleSpan">
+            <span class="p2">Поиск по тексту</span>
+            <input type="text" placeholder="Введите слово" class="inputSearch textSpan">
+        </div>
+    </main>
+    <footer class="footer">
+    </footer>
+    <template class="postTemplate">
+        <div class="post">
+            <div>
+                <input type="checkbox" class="checker">
+                <div class="postTop">
+                    <div class="flex sb aiCenter">
+                        <h1 class="titleSearch"></h1>
+                        <span class="autorSpan"></h2>
+                    </div>
+                    <p class="p2 items-text textSearch"></p>
+                    <div class="bottom"></div>
+                </div>
+                <label class="label"></label>
+            </div>
+            <div class="flex sb aiCenter">
+                <button class="buttonLikePost flex aiCenter sa">
+                    <img src="../images/like.png" alt="">
+                    Нравится
+                    <span class="countOfLikes"></span>
+                </button>
+                <div class="flex sb aiCenter">
+                    <span class="id"></span>
+                    <div class="divBorder"></div>
+                    <span class="dateOnPost"></span>
+                    <div class="divBorder"></div>
+                    <span class="postSpan"><span class="countOfComments"></span></span>
+                    <div class="divBorder lastBorder"></div>
+                    <span class="postSpan changeSpan">Редактировать</span>
+                </div>
+            </div>
+        </div>
+    </template>
+    <template class="autorsTemplate">
+        <div class="autorsDiv">
+            <div class="flex sb aiCenter">
+                <h1 class="autorName"></h1>
+                <span class="autorRating"></h2>
+            </div>
+        </div>
+    </template>
+    <script src="./index.js"></script>
+</body>
+
+</html>

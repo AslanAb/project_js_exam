@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторы</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header class="header flex sb aiCenter">
+        <div class="logoImg">
+            <img src="../images/logo.jpg" alt="" class="logoImg">
+        </div>
+        <div class="menu flex sb aiCenter">
+            <button class="buttonMainPage buttonMenu buttonStyle">Главная</button>
+            <button class="buttonAutors buttonMenu buttonStyle">Авторы</button>
+            <button class="buttonPersonalPosts buttonMenu buttonStyle">Мои посты</button>
+        </div>
+        <div class="login">
+            <button class="buttonStyle buttonLogin" data-path="login">Войти</button>
+            <button class="buttonStyle buttonLogout hide" data-path="login">Выйти</button>
+        </div>
+    </header>
+    <main class="main flex">
+        <div class="mainLeft flex column aiCenter">
+            <p class="p1 nutUserInP">Необходимо войти в аккаунт для публикации, оценки и комментировании постов</p>
+            <div class="portfileCard flex column aiCenter hide">
+                <img src="../images/santa.png" alt="" class="santaImg">
+                <p class="p1 idP"></p>
+                <span class="p1 nameSurnameP"></span>
+                <button class="buttonChange buttonStyle flex sa aiCenter hide">Изменить</button>
+            </div>
+        </div>
+        <div class="mainMid flex column aiCenter"></div>
+        <div class="mainRight flex column">
+            <span class="p2">Сортировать:</span>
+            <span class="p2">по рейтингу</span>
+            <select name="sortByRating" id="" class="select">
+                <option value="1">выбрать</option>
+                <option value="2">по возрастанию</option>
+                <option value="3">по убыванию</option>
+            </select>
+            <button class="sort buttonStyle flex sa aiCenter">Сортировать</button>
+            <span class="p2">Поиск</span>
+            <input type="text" placeholder="Введите имя автора" class="inputSearch autorSearch">
+        </div>
+    </main>
+    <footer class="footer">
+    </footer>
+    <template class="autorsTemplate">
+        <div class="autorsDiv">
+            <div class="flex column">
+                <h1 class="autorName"></h1>
+                <div class="flex sb">
+                    <span class="autorRating"></span>
+                    <div class="flex">
+                        <span class="likeSpan">Поставить лайк аккаунту:</span>
+                        <button class="likeAutor"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="./autors.js"></script>
+</body>
+
+</html>
